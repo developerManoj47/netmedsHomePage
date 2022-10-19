@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netmeds clone</title>
+
+    <!-- link for google icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <!-- ------------------SWIPERJS CSS CDN LINK --------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbarr-wrapper">
+            <div class="navbarr d-flex ">
+                <div class="navbar-brand-wrapper">
+                    <a href="#" class="navbar-brand"><img class="logo"
+                            src="https://www.netmeds.com/assets/gloryweb/images/netmeds-new-logo.svg"
+                            alt="Netmeds.com, India ki Online Pharmacy"></a>
+                </div>
+                <div class="search-bar">
+                    <div class="search-box d-flex">
+                        <div class="location">
+                            <details>
+                                <summary>Deliver to <span>110002</span></summary>
+
+                                <div class="pincode-wrapper">
+                                    <div class="pincode">
+                                        <div class="uppar">
+                                            <div>
+                                                <h3>Where do you want the delivery?</h3>
+                                                <span>Get access to your Addresses, Orders, and Wishlist</span>
+                                            </div>
+                                            <div>
+                                                <div class="location-btn">
+                                                    <button type="button"><a href="#">Sign in to see your
+                                                            location</a></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="lower">
+                                            <div>
+                                                <h3>Or Enter Pincode</h3>
+                                                <span>Select pincode to see product availability.</span>
+                                            </div>
+                                            <div class="input-pincode ">
+                                                <form action="#" method="post">
+                                                    <div class="d-flex">
+                                                        <span class="material-symbols-outlined">location_on</span>
+                                                        <input type="text" placeholder="Enter pincode">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="detect-location d-flex">
+                                                <span class="material-symbols-outlined">location_searching</span>
+                                                <span>Detect my location</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="search-wrapper">
+                            <form action="#">
+                                <input type="text" placeholder="search for medicine & wallness products...">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-wrapper d-flex align-items-center">
+                    <div>
+                        <a class="text-decoration-none text-light" href="#">Upload</a>
+                    </div>
+                </div>
+                <div class="cart-wrapper d-flex align-items-center">
+                    <a class="text-decoration-none text-light" href="#">
+                        <span class="counter-number">0</span>
+                        cart
+                    </a>
+                </div>
+                <div class="sign-in-wrapper d-flex align-items-center">
+                    <div>
+                        <a class="text-decoration-none text-light" href="#">Sign in / Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="main-navigation">
+            <div class="explorer-menu">
+                <ul class="explorer-menu-list d-flex justify-content-between">
+                    <li class="medicine-pro">
+                        <a href="#">Medicine &nbsp; &nbsp; &plus;</a>
+                        <ul>
+                            <li>
+                                All Medicine
+                            </li>
+                            <li>
+                                Previously Ordered Products
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="wallness-pro">
+                        <a href="#">Wallness</a>
+                    </li>
+                    <li class="lab-pro">
+                        <a href="#">Lab Test</a>
+                    </li>
+                    <li class="beauty-pro">
+                        <a href="#">Beauty &nbsp; &nbsp; &plus;</a>
+                        <ul>
+                            <li>
+                                Personal Care
+                            </li>
+                            <li>
+                                Make-Up
+                            </li>
+                            <li>
+                                Hair
+                            </li>
+                            <li>
+                                Skin Care
+                            </li>
+                            <li>
+                                Men's Grooming
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="health-pro">
+                        <a href="#">Health/Fitness &nbsp; &nbsp; &plus;</a>
+                        <ul>
+                            <li>
+                                Health Library
+                            </li>
+                            <li>
+                                PatientsAlike
+                            </li>
+                            <li>
+                                CoronaAwareness
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="header-footer container-fluid">
+        <div class="d-flex justify-content-between" >
+            <div>
+                <a href="#">COVID Essentials</a>
+            </div>
+            <div>
+                <a href="#">Diabetes</a>
+            </div>
+            <div>
+                <a href="#">Eyewear</a>
+            </div>
+            <div>
+                <a href="#">Ayush</a>
+            </div>
+            <div>
+                <a href="#">Ayurvedic</a>
+            </div>
+            <div>
+                <a href="#">Homeopthy</a>
+            </div>
+            <div>
+                <a href="#">Fitness</a>
+            </div>
+            <div>
+                <a href="#">Mom & Baby</a>
+            </div>
+            <div>
+                <a href="#">Devices</a>
+            </div>
+            <div>
+                <a href="#">Surgicals</a>
+            </div>
+            <div>
+                <a href="#">Sexual Wallness</a>
+            </div>
+            <div>
+                <a href="#">Treatments</a>
+            </div>
+        </div>
+    </header>
+    <section class=".home-slider-wrapper container-fluid  justify-content-center ">
+        <div class="swiper mySwiper">
+            <div class=" swiper-wrapper ">
+                <div class=" swiper-slide ">
+                    <a href="#"><img src="./images/slide1.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="./images/slide2.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="./images/slide3.jpg" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="./images/slide4.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="save-upto d-flex justify-content-between">
+        <div class="box box-1">
+            <a href="#">
+                <span>
+                    <img src="https://www.netmeds.com/assets/gloryweb/images/icons/Wellnessnew.svg" alt="">
+                </span>
+                <span>
+                    <span class="heading d-block">Order Medicine</span>
+                    <span class="save-text">Save Upto 25% off</span>
+                </span>
+            </a>
+        </div>
+        <div class="box box-2">
+            <a href="#">
+                <span>
+                    <img src="https://www.netmeds.com/assets/gloryweb/images/icons/Beautynew.svg" alt="">
+                </span>
+                <span>
+                    <span class="heading d-block">Beauty</span>
+                    <span class="save-text">Save Upto 40% off</span>
+                </span>
+            </a>
+        </div>
+        <div class="box box-3">
+            <a href="#">
+                <span>
+                    <img src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg" alt="">
+                </span>
+                <span>
+                    <span class="heading d-block">Wallness</span>
+                    <span class="save-text">Flat 15% off</span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section class="payment-partner-wrapper">
+        <div class="uppar">
+            <span class="heading-content">Payment Partner Offers</span>
+            <span>
+                <a class="view-all" href="#">View all</a>
+            </span>
+        </div>
+        <div class="lower d-flex ">
+            <div class="box-payment">
+                <a class="d-flex text-decoration-none align-items-center" href="#">
+                    <img src="https://www.netmeds.com/images/cms/offers/1657032164_Simpl_Icon.png" alt="">
+                    <div>
+                        <h4>Get up to Rs. 1000 Simple Cashback* {8%}!...</h4>
+                        <p>
+                            Today only! Get up to Rs. 1000 simple Cashback {8%} on FIRST-<br>EVER payment made via
+                            Simple towards ANY p..
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="box-payment">
+                <a class="d-flex text-decoration-none align-items-center" href="#">
+                    <img src="https://www.netmeds.com/images/cms/offers/1660838140_twid.png" alt="">
+                    <div>
+                        <h4>Use Pay with Rewards, Get max. Rs. 1000 Cashback!...</h4>
+                        <p>
+                            Get assured cashback of max. Rs. 1000 when you pay using the <br>*Pay with Rewards option..
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="static-section d-flex">
+        <div class="first-static">
+            <div class="text-static ">
+                <span class="heading-content">Previous Order</span>
+                <span class="sub-heading-static">Your Previously Ordered Product</span>
+
+                <a href="#">View Orders</a>
+            </div>
+            <div class="img-static">
+                <img src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/previous_orders.svg" alt="">
+            </div>
+        </div>
+        <div class="second-static">
+            <div class="stext-static ">
+                <span class="heading-content">Beauty Products</span>
+                <span class="second-heading-static">Save upto 40% off</span>
+
+                <a class="beauty-btn" href="#">Explore Beauty</a>
+            </div>
+            <div class="img-static">
+                <img src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="tranding-today-wrapper">
+        <span class="heading-content">Tranding Today</span>
+        <div class="trandingSwiper">
+            <button class="btn-slider-tranding" id="btn-prev-tranding"><img
+                    src="https://www.netmeds.com/assets/version1662540511/gloryweb/images/icons/white_prev.svg"
+                    alt=""></button>
+            <button class="btn-slider-tranding" id="btn-next-tranding"><img
+                    src="https://www.netmeds.com/assets/version1662540511/gloryweb/images/icons/white_next.svg"
+                    alt=""></button>
+            <div class="tranding-slider-wrapper" id="tranding-slider-wrapper">
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img1.jpg" alt="">
+                </div>
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img2.jpg" alt="">
+                </div>
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img3.jpg" alt="">
+                </div>
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img4.jpg" alt="">
+                </div>
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img5.jpg" alt="">
+                </div>
+                <div class="tranding-slide">
+                    <img src="./images/trandingToday/img6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="limited-times-wrapper">
+        <div class="limited-times">
+            <div class="row-1-LT">
+                <div class="col1-LT">
+                    <span class="heading-content">Limited Time Deals</span>
+                </div>
+                <div class="col2-LT">
+                    <span>
+                        <a href="#" class="view-all">View all</a>
+                    </span>
+                </div>
+            </div>
+            <div class="row-2-LT">
+                <div class="slides-LT-wrapper" id="slide-1-LT">
+                    <div class="slides-LT">
+                        <a href="#">
+                            <span class="LT-img">
+                                <img src="./images/limitedTime/accu-chek.jpg" alt="">
+                            </span>
+                            <span class="LT-img-caption">Accu-Chek Active Test Strips 50's</span>
+                            <span class="rate-LT">
+                                <span>₹ 902.14</span>
+                                <strike>₹ 1,049.00</strike>
+                            </span>
+                            <span class="LT-off">UPTO 14% off</span>
+                        </a>
+                        <div class="LT-btn-wrapper">
+                            <button>ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides-LT-wrapper" id="slide-2-LT">
+                    <div class="slides-LT">
+                        <a href="#">
+                            <span class="LT-img">
+                                <img src="./images/limitedTime/accu-chek.jpg" alt="">
+                            </span>
+                            <span class="LT-img-caption">Accu-Chek Active Test Strips 50's</span>
+                            <span class="rate-LT">
+                                <span>₹ 902.14</span>
+                                <strike>₹ 1,049.00</strike>
+                            </span>
+                            <span class="LT-off">UPTO 14% off</span>
+                        </a>
+                        <div class="LT-btn-wrapper">
+                            <button>ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides-LT-wrapper" id="slide-3-LT">
+                    <div class="slides-LT">
+                        <a href="#">
+                            <span class="LT-img">
+                                <img src="./images/limitedTime/accu-chek.jpg" alt="">
+                            </span>
+                            <span class="LT-img-caption">Accu-Chek Active Test Strips 50's</span>
+                            <span class="rate-LT">
+                                <span>₹ 902.14</span>
+                                <strike>₹ 1,049.00</strike>
+                            </span>
+                            <span class="LT-off">UPTO 14% off</span>
+                        </a>
+                        <div class="LT-btn-wrapper">
+                            <button>ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides-LT-wrapper" id="slide-4-LT">
+                    <div class="slides-LT">
+                        <a href="#">
+                            <span class="LT-img">
+                                <img src="./images/limitedTime/accu-chek.jpg" alt="">
+                            </span>
+                            <span class="LT-img-caption">Accu-Chek Active Test Strips 50's</span>
+                            <span class="rate-LT">
+                                <span>₹ 902.14</span>
+                                <strike>₹ 1,049.00</strike>
+                            </span>
+                            <span class="LT-off">UPTO 14% off</span>
+                        </a>
+                        <div class="LT-btn-wrapper">
+                            <button>ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides-LT-wrapper" id="slide-5-LT">
+                    <div class="slides-LT">
+                        <a href="#">
+                            <span class="LT-img">
+                                <img src="./images/limitedTime/accu-chek.jpg" alt="">
+                            </span>
+                            <span class="LT-img-caption">Accu-Chek Active Test Strips 50's</span>
+                            <span class="rate-LT">
+                                <span>₹ 902.14</span>
+                                <strike>₹ 1,049.00</strike>
+                            </span>
+                            <span class="LT-off">UPTO 14% off</span>
+                        </a>
+                        <div class="LT-btn-wrapper">
+                            <button>ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="slides-LT-wrapper" id="slide-6-LT">
+
+                </div>
+                <div class="slides-LT-wrapper" id="slide-7-LT">
+
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="coupon-wrapper">
+        <div class="coupon">
+            <div class="C-row-1">
+                <button id="close" onclick="closeCoupon()">
+                    <h1>&cross;</h1>
+                </button>
+            </div>
+            <div class="C-row-2">
+                <img src="./images/couponIMG3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="mode-btn">
+        <button id="mode-icon-btn" onclick="changeMode()">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </button>
+    </div>
+
+    <footer class="footer-wrapper">
+        <div class="footer-start d-flex">
+            <div>
+                <img src="https://www.netmeds.com/assets/gloryweb/images/netmeds-footer-logo.svg"
+                    alt="Netmeds.com, India ki Online Pharmacy">
+            </div>
+            <div>
+                <p>
+                    Netmeds.com is one of India's most trusted pharmacies, dispensing quality medicines at reasonable
+                    prices to over 7 million happy customers-PAN India.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-mid d-flex justify-content-between">
+            <div>
+                <h3>COMPANY</h3>
+                <div>
+                    <p><a href="#">About Netmeds</a></p>
+                    <p><a href="#">Customers Speak</a></p>
+                    <p><a href="#">In the News</a></p>
+                    <p><a href="#">Career</a></p>
+                    <p><a href="#">Terms and Conditions</a></p>
+                    <p><a href="#">Shipping and Delivery Policy</a></p>
+                </div>
+            </div>
+            <div>
+                <h3>SHOPPING</h3>
+                <div>
+                    <p>
+                        <a href="#">Browse by A-Z</a>
+                    </p>
+                    <p>
+                        <a href="#">Browse by Manufacturers</a>
+                    </p>
+                    <p>
+                        <a href="#">Health Articles</a>
+                    </p>
+                    <p>
+                        <a href="#">Offers / Coupons</a>
+                    </p>
+                    <p>
+                        <a href="#">FAQs</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h3>SOCIAL</h3>
+                <div>
+                    <p>
+                        <a href="#">Patients Alike</a>
+                    </p>
+                    <p>
+                        <a href="#">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#">Twitter</a>
+                    </p>
+                    <p>
+                        <a href="#">LinkedIn</a>
+                    </p>
+                    <p>
+                        <a href="#">Youtube</a>
+                    </p>
+                    <p>
+                        <a href="#">Refer & Earn</a>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                <div>
+                    <p class="text-para">
+                        Get a free subscription to our health and <br> fitness tip and stay tuned to our latest offers
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-end d-flex justify-content-between">
+            <div>
+                <a href="#">Medicine</a>
+            </div>
+            <div>
+                <a href="#">Wellness</a>
+            </div>
+            <div>
+                <a href="#">Lab Tests</a>
+            </div>
+            <div>
+                <a href="#">Beauty</a>
+            </div>
+            <div>
+                <a href="#">Copyright &copy; 2022.All Rights Reserved</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- --------------SWIPER JAVASCRIPT LINK ----------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- <script src="./js/main.js"></script> -->
+    <script>
+        window.onload = loadCoupon();
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            }
+        });
+    </script>
+
+</body>
+
+</html>

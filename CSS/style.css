@@ -1,0 +1,887 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    background: var(--secondary-color);
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../fonts/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: "lato-light";
+    src: url(../fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: "lato-semibold";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "lato-bold";
+    src: url(../fonts/Lato-Bold.ttf);
+}
+
+:root {
+    --primary-color: #32aeb1;
+    --secondary-color: #f3f7fb;
+    --ternary-color: #ef4281;
+    --success-color: #5ba41c;
+    --heaven-color: #ffffff;
+    --gray-color: #8a8f95;
+
+}
+
+/* ==============================================================================
+                            styling of navbar
+================================================================================
+*/
+.navbarr-wrapper {
+    position: relative;
+}
+
+.navbarr {
+    background: #32aeb1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar-brand-wrapper a {
+    padding-left: 3.5rem;
+}
+
+.navbarr div img {
+    width: 16.8rem;
+    height: 6rem;
+}
+
+.search-bar {
+    width: 45%;
+    margin-left: 0;
+}
+
+.search-box {
+    width: 100%;
+    height: 4.8rem;
+    border-radius: 0.6rem;
+    background: var(--heaven-color);
+}
+
+/* ------------------------- DETAILS BOX----------------------------------- */
+.location {
+    width: 27%;
+    background: var(--heaven-color);
+    border-radius: 0.6rem;
+    position: relative;
+}
+
+.location summary {
+    margin: 1.3rem 0;
+    padding-left: 1.3rem;
+    font-size: 1.5rem;
+    color: rgba(11, 18, 25, 0.7);
+    letter-spacing: normal;
+    line-height: 2.2rem;
+    border-right: 1px solid var(--gray-color);
+}
+
+.location summary span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.pincode-wrapper {
+    width: 38rem;
+    min-height: 30rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background: var(--heaven-color);
+    margin-top: 2rem;
+    padding: 1rem;
+    position: absolute;
+
+}
+
+.pincode {
+    width: 100%;
+
+}
+
+.pincode .uppar h3 {
+    margin-top: 1rem;
+    font-family: "lato-bold";
+    font-size: 1.65rem;
+}
+
+.pincode .uppar span {
+    font-size: 1.4rem;
+    color: rgba(133, 136, 140, 1);
+    line-height: 2.5rem;
+}
+
+.pincode .location-btn {
+    width: 100%;
+    height: 3rem;
+    /* background: yellow; */
+    border: 1px solid transparent;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.location-btn button {
+    border: 1px solid transparent;
+    outline: none;
+    background: var(--primary-color);
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+}
+
+.location-btn button a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "lato-semibold";
+    color: var(--heaven-color);
+    letter-spacing: 0.05rem;
+}
+
+.pincode .lower h3 {
+    margin-top: 2rem;
+    font-family: "lato-bold";
+    font-size: 1.65rem;
+}
+
+.pincode .lower>div:first-child span {
+    font-size: 1.4rem;
+    color: rgba(133, 136, 140, 1);
+    line-height: 2.5rem;
+}
+
+.pincode .lower .input-pincode {
+    width: 100%;
+    background: var(--secondary-color);
+    margin-top: 1.8rem;
+    color: rgba(133, 136, 140, 1);
+    height: 3.5rem;
+    padding: 0.8rem 0 0.8rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.pincode .lower .input-pincode input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 1rem;
+}
+
+.pincode .lower .input-pincode input:placeholder-shown {
+    font-size: 1.5rem;
+    font-family: "lato-semibold";
+}
+
+.pincode .lower .detect-location {
+    margin-top: 1rem;
+    color: var(--ternary-color);
+}
+
+.pincode .lower .detect-location span:last-child {
+    font-size: 1.4rem;
+    font-family: "lato-semibold";
+    margin-left: 1rem;
+}
+
+.search-box .search-wrapper {
+    width: 72%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.search-wrapper form {
+    width: 100%;
+    height: 100%;
+}
+
+.search-wrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline-style: none;
+    font-size: 1.5rem;
+    font-family: "lato-semibold";
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.05rem;
+    padding-left: 1rem;
+}
+
+/* ---------------------------------- UPLOAD CART SIGN IN-------------------------------------- */
+.upload-wrapper a {
+    color: var(--heaven-color);
+    font-size: 1.7rem;
+    font-family: "lato-semibold";
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/upload_rx.svg) no-repeat center left;
+    padding-left: 3rem;
+}
+
+.cart-wrapper a {
+    color: var(--heaven-color);
+    font-size: 1.7rem;
+    font-family: "lato-semibold";
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/cart_icon.svg) no-repeat left center;
+    padding-left: 3.4rem;
+    position: relative;
+}
+
+.cart-wrapper a span {
+    background: var(--ternary-color);
+    padding: 0 0.8rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: -0.3rem;
+    left: 1rem;
+}
+
+.sign-in-wrapper a {
+    color: var(--heaven-color);
+    font-size: 1.7rem;
+    font-family: "lato-semibold";
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/profile_icon.svg) no-repeat center left;
+    padding-left: 3rem;
+}
+
+.navbarr>* {
+    padding: 2rem 2rem 0.5rem 2rem;
+}
+
+/* 
+======================================================================================
+                            styling of main-navigation
+======================================================================================                           
+*/
+
+.main-navigation {
+    background: var(--primary-color);
+    height: 6rem;
+}
+
+.explorer-menu {
+    padding: 0 15rem;
+}
+
+ul.explorer-menu-list {
+    list-style: none;
+}
+
+ul.explorer-menu-list li {
+    font-family: "lato-semibold";
+    height: 4.6rem;
+    width: auto;
+    /* position: relative; */
+    padding-top: 1.8rem;
+}
+
+ul.explorer-menu-list li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--heaven-color);
+    font-style: normal;
+    font-stretch: normal;
+    padding: 2rem 0 2rem 5rem;
+    height: 4rem;
+
+}
+
+ul.explorer-menu-list li.medicine-pro a {
+    background: url(https://www.netmeds.com/assets/version1662540511/gloryweb/images/icons/medicine.svg) no-repeat left center;
+    height: 4rem;
+}
+
+ul.explorer-menu-list li ul {
+    display: none;
+    background: var(--secondary-color);
+    width: 21rem;
+    /* height: 10rem; */
+    list-style: none;
+    font-family: "lato-light";
+    margin: 1rem 0 0 5rem;
+    padding: 1rem;
+    box-shadow: 1px 2px 6px 1px rgba(128, 128, 128, 0.7);
+    position: absolute;
+}
+
+ul.explorer-menu-list li ul li {
+    font-size: 1.3rem;
+}
+
+ul.explorer-menu-list li:hover ul {
+    display: block;
+}
+
+/* ---------------------------lsit item 2 ---------------------------- */
+
+.explorer-menu-list li.wallness-pro a {
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/wellness.svg) no-repeat left center;
+    height: 4rem;
+}
+
+/* --------------------------------list item 3 ----------------------------------- */
+.explorer-menu-list li.lab-pro a {
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/diagnostics.svg) no-repeat left center;
+    height: 4rem;
+}
+
+/* ---------------------------------list item 4 ------------------------------------ */
+
+
+.explorer-menu-list li.beauty-pro a {
+    background: url(https://www.netmeds.com/assets/gloryweb/images/icons/beauty.svg) no-repeat left center;
+    height: 4rem;
+}
+
+/* ------------------------------------ list item 5 -------------------------------------- */
+.explorer-menu-list li.health-pro a {
+    background: url(https://www.netmeds.com/assets/version1662540511/gloryweb/images/icons/health-library.svg) no-repeat left center;
+    height: 4rem;
+}
+
+/* =============================================================================================
+                            styling of header footer 
+================================================================================================= */
+.header-footer {
+    padding: 1rem 15rem 2rem 15rem;
+}
+
+.header-footer>div a {
+    text-decoration: none;
+    font-size: 1.33rem;
+    font-family: "lato-semibold";
+    font-stretch: normal;
+    font-style: normal;
+    color: rgba(0, 0, 0, 1);
+
+}
+
+/* =====================================================================================
+                            home slider styling 
+
+                    NOTE USEFULL FOR YOU 
+======================================================================================= */
+.home-slider-wrapper {
+    position: relative;
+}
+
+
+/* -----------===========88888888888=8 SWIPER CSS --------------========8888888888 */
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: -90;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    display: -webkit-box;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    display: -ms-flexbox;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-align: center;
+    display: -webkit-flex;
+}
+
+.swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    /* transform: scaleX(1.3); */
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.swiper div:where(:nth-child(2), :nth-child(3)) {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* ===============================================================================================================
+                                        styling of sectionsave-upto                                        
+==================================================================================================================*/
+section.save-upto {
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+}
+
+section.save-upto .box {
+    width: 32%;
+    background: var(--heaven-color);
+    padding: 1.2rem 0rem 1.2rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px -4px rgba(11, 18, 25, 0.5);
+}
+
+section.save-upto .box a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+section.save-upto .box a span:first-child img {
+    margin-right: 2.5rem;
+    height: 6rem;
+}
+
+section.save-upto .box a span:last-child .heading {
+    font-size: 1.8rem;
+    font-family: "lato-bold";
+    line-height: 2.6rem;
+    margin: 0;
+    color: #0b1219;
+}
+
+section.save-upto .box a span:last-child .save-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: "lato-bold";
+    color: #5ba41c;
+}
+
+/* ===============================================================================================================
+                                        styling of section payment-partner                                     
+==================================================================================================================*/
+.payment-partner-wrapper {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.payment-partner-wrapper .uppar {
+    padding-bottom: 2rem;
+}
+
+.box-payment {
+    background: var(--heaven-color);
+    padding: 1rem 0 0 2rem;
+    width: 45rem;
+    border-radius: 1rem;
+    margin-right: 5rem;
+}
+
+.box-payment a img {
+    width: 6rem;
+    height: 4rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 2rem;
+    margin-right: 2rem;
+}
+
+.box-payment a div h4 {
+    font-family: "lato-bold";
+    font-size: 1.3rem;
+    color: #0b1219;
+}
+
+.box-payment a div p {
+    font-size: 1.2rem;
+    font-family: "lato-light";
+    color: #6F7284;
+    ;
+}
+
+/* ===============================================================================================================
+                                        styling of section static                                     
+==================================================================================================================*/
+.static-section {
+    width: 100%;
+    padding: 2rem;
+}
+
+.first-static {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 47%;
+    border-right: 1px solid rgba(11, 18, 25, .4);
+    /* background-color: yellow; */
+}
+
+.text-static {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text-static span.sub-heading-static {
+    font-size: 1.6rem;
+    font-family: "lato-semibold";
+    line-height: 2.4rem;
+    color: rgba(11, 18, 25, .7);
+    margin-top: 1.6rem;
+
+}
+
+.text-static a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-family: "lato-bold";
+    line-height: 3.6rem;
+    margin-top: 3rem;
+    width: 14rem;
+    height: 3.6rem;
+    background: url(https://www.netmeds.com/assets/version1662540511/gloryweb/images/icons/new-icons/arrow_mark.svg) no-repeat right top;
+}
+
+/* ------------------------------------------ second-static---------------------------------------- */
+.second-static {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 47%;
+    margin-left: 2rem;
+    /* background-color: yellow; */
+}
+
+.stext-static {
+    display: flex;
+    flex-direction: column;
+}
+
+.stext-static span.second-heading-static {
+    font-size: 1.6rem;
+    font-family: "lato-semibold";
+    line-height: 2.4rem;
+    color: var(--success-color);
+    margin-top: 1.6rem;
+}
+
+.stext-static a {
+    text-decoration: none;
+    color: var(--heaven-color);
+    font-size: 1.4rem;
+    font-family: "lato-bold";
+    padding-left: 2rem;
+    border-radius: 0.5rem;
+    line-height: 3.6rem;
+    margin-top: 3rem;
+    width: 14rem;
+    height: 3.6rem;
+    background: var(--primary-color);
+}
+
+/* ===============================================================================================================
+                                        styling of section tranding today                                     
+==================================================================================================================*/
+section.tranding-today-wrapper {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+
+}
+
+.btn-slider-tranding {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+#btn-prev-tranding {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    z-index: 5;
+}
+
+#btn-next-tranding {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    z-index: 5;
+}
+.trandingSwiper {
+    width: 100%;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+.tranding-slider-wrapper {
+    width: 205%;
+}
+.tranding-slide {
+    display: inline-block;
+    width: 425px;
+    margin: 0  .5em;
+    border-radius: 10px;
+}
+.tranding-slide:nth-child(1){
+    background: green;
+}
+.tranding-slide img {
+    border-radius: 10px;
+    width: 425px;
+}
+
+
+/* ===============================================================================================================
+                                        styling of limited time section                                     
+==================================================================================================================*/
+.limited-times-wrapper {
+    width: 100%;
+    margin-top: 2rem;
+    background: linear-gradient(180deg,#24aeb1 45%,#f3f7fb 30%);
+}
+.limited-times {
+    width: 1300px;
+    margin: auto;
+}
+.row-1-LT {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row-1-LT span , .row-1-LT .view-all {
+    color: var(--heaven-color) !important;
+}
+.row-2-LT {
+    width: 100%;
+    margin-top: 1rem; 
+}
+.row-2-LT  .slides-LT-wrapper{
+    width: 24.6rem;
+    height: 40rem;
+    background: var(--heaven-color);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin: 0 0.6rem 0 0.5rem;
+    display: inline-block;
+    box-shadow: 0 6px 12px -4px rgb(11 18 25 / 20%);
+}  
+.row-2-LT  .slides-LT > a {
+    text-decoration: none;
+}
+.row-2-LT  .slides-LT > a > span {
+    display: block;
+}
+.row-2-LT  .slides-LT > a > span:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LT-img-caption {
+    font-size: 1.7rem;
+    color: rgba(0, 0, 0, 1);
+    font-family: "lato-bold" ;
+    font-weight: 500;
+}
+.rate-LT {
+    margin-top: 1.5rem;
+    color: rgba(0, 0, 0, 1);
+    font-family: "lato-semibold";
+}
+.rate-LT span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.rate-LT strike {
+    font-size: 1.2rem;
+    color: gray;
+    margin-left: 0.5rem;
+}
+.LT-off {
+    font-size: 1.5rem;
+    color: var(--success-color);
+    font-family: "lato-semibold";
+}
+.LT-btn-wrapper {
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+}
+.LT-btn-wrapper button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--primary-color);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    font-family: lato-semibold;
+    color: var(--heaven-color);
+}
+
+
+
+/* ===============================================================================================================
+                                        styling of mode button                                     
+==================================================================================================================*/
+.mode-btn {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+}
+#mode-icon-btn {
+    padding: .5rem 1rem;
+    border: 1px solid var(--heaven-color);
+    border-radius: .8rem;
+    background: rgba(0, 0, 0, 1);
+    width: 6rem;
+    color: var(--heaven-color);
+}
+
+.myDark {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+.btn-mode-change {
+    background: white;
+    color: black;
+}
+
+/* ===============================================================================================================
+                                        styling of coupon                                    
+==================================================================================================================*/
+
+#coupon-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    
+}
+.coupon {
+  width: 60%;
+  margin: auto;
+  margin-top: 90px;
+  background: rgb(247, 239, 239);
+  border: 2px solid black;
+}
+.coupon button {
+
+    border: none;
+    outline: none;
+    background: transparent;
+    margin: 2px 0 0 5px;
+}
+.coupon img {
+    width: 100%;
+    height: 400px;
+    margin-top: 5px;
+}
+
+/* ===============================================================================================================
+                                        styling of footer                                    
+==================================================================================================================*/
+footer.footer-wrapper {
+    width: 100%;
+    padding: 2rem;
+    background: var(--heaven-color);
+}
+
+/* ------------------------------------ footer start ------------------------------------ */
+.footer-start {
+    width: 100%;
+    padding: 5rem 3rem;
+}
+
+.footer-start div img {
+    width: 20rem;
+}
+
+.footer-start div p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-family: "lato-semibold";
+    color: rgba(11, 18, 25, .5);
+    padding-left: 10rem;
+}
+
+/* -------------------------------------------footer mid --------------------------------------------- */
+.footer-mid {
+    padding: 5rem 0;
+}
+
+.footer-mid div h3 {
+    font-size: 1.6rem;
+    font-family: "lato-bold";
+    line-height: 3rem;
+}
+
+.footer-mid div p a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "lato-semibold";
+    color: black;
+}
+
+.footer-mid div p.text-para {
+    font-size: 1.5rem;
+    font-family: "lato-semibold";
+    color: black;
+}
+
+/* ------------------------------------------------- footer end ----------------------------------- */
+.footer-end {
+    padding: 2rem 0;
+}
+
+.footer-end div a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "lato-bold";
+    color: rgba(11, 18, 25, .5);
+}
+
+/* **********************************************************************************
+                                UTILITY CLASSES 
+************************************************************************************ */
+.heading-content {
+    font-size: 2.5rem;
+    font-family: "lato-bold";
+    display: block;
+    font-stretch: normal;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.view-all {
+    text-decoration: none;
+    color: var(--ternary-color);
+    font-size: 1.6rem;
+    font-family: "lato-semibold";
+    float: right;
+}
