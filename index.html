@@ -159,7 +159,7 @@
         </div>
     </header>
     <header class="header-footer container-fluid">
-        <div class="d-flex justify-content-between" >
+        <div class="d-flex justify-content-between">
             <div>
                 <a href="#">COVID Essentials</a>
             </div>
@@ -287,7 +287,13 @@
                     </div>
                 </a>
             </div>
+            <div class="weather-wrapper">
+                <p>Weather</p>
+                <p class="temperature" id="temperature">0&deg;C</p>
+                <!-- <img src="./images/weatherImg/" alt="sun"> -->
+            </div>
         </div>
+
     </section>
 
     <section class="static-section d-flex">
@@ -609,7 +615,38 @@
             }
         });
     </script>
+    <script>
+        // -----------weather application --------------
+        let temperature = document.getElementById('temperature');
+      
+        if (navigator.geolocation) {
+            console.log('i am here');
+            navigator.geolocation.getCurrentPosition(showPosition)
+        } else {
+            console.log('geolocation is not supported');
+        }
 
+        function showPosition(data){
+            console.log(data)
+            let lat = data.coords.latitude;
+            let long = data.coords.longitude;
+            const url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+            //api calling
+            fetch(url, { method: 'GET' })
+                // return promise
+                .then((res) => res.json())
+                // resolve promise
+                .then((data) => {
+                    console.log(data)
+                    let temp = data.list[0].temp.day;
+                    temperature.innerText = `${temp} °C`;
+                })
+                // .catch((err) => {
+                //     console.log(err)
+                // })
+        }
+
+    </script>
 </body>
 
 </html>
